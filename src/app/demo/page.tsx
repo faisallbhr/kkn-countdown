@@ -1,3 +1,5 @@
+"use client";
+
 import CountdownComponent from "@/components/Countdown";
 import Link from "next/link";
 import { useState, useEffect } from "react";
