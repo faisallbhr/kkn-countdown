@@ -1,8 +1,10 @@
 import CountdownComponent from "@/components/Countdown";
+import Link from "next/link";
 
-export default function Home() {
-  const startDate = new Date("2024-07-10");
-  const endDate = new Date("2024-08-23");
+export default function Demo() {
+  const startDate = new Date();
+  const endDate = new Date();
+  endDate.setDate(startDate.getDate() + 1);
 
   return (
     <main className="min-h-dvh flex flex-col justify-center items-center px-4">
@@ -13,6 +15,15 @@ export default function Home() {
         Universitas Jember
       </h1>
       <CountdownComponent startDate={startDate} endDate={endDate} />
+      <small className="my-4">
+        This is a demo page, you can see the repository{" "}
+        <Link
+          href="https://github.com/faisallbhr/kkn-countdown"
+          className="text-primary">
+          here
+        </Link>
+        .
+      </small>
     </main>
   );
 }
