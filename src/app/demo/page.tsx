@@ -22,7 +22,7 @@ export default function Demo() {
         Universitas Jember
       </h1>
       <CountdownComponent startDate={startDate} endDate={endDate} />
-      <small className="my-4">
+      <small className="my-4 text-center">
         This is a demo page, you can see the repository{" "}
         <Link
           href="https://github.com/faisallbhr/kkn-countdown"
