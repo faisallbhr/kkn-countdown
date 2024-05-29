@@ -1,11 +1,15 @@
 import CountdownComponent from "@/components/Countdown";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Demo() {
-  const today = () => new Date();
-  const startDate = today();
-  const endDate = new Date();
+  const [startDate, setStartDate] = useState(new Date());
+  const endDate = new Date(startDate);
   endDate.setDate(startDate.getDate() + 1);
+
+  useEffect(() => {
+    setStartDate(new Date());
+  }, []);
 
   return (
     <main className="min-h-dvh flex flex-col justify-center items-center px-4">
