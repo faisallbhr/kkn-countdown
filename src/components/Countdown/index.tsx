@@ -13,17 +13,25 @@ const CountdownComponent = ({
   const timeLeft = useCountdown(startDate, endDate);
 
   if (timeLeft === null) {
-    return <h3 className="my-10">Loading...</h3>;
+    return (
+      <h3 className="my-10 text-center whitespace-nowrap w-full">Loading...</h3>
+    );
   }
 
   const now = new Date();
   if (now < startDate) {
-    return <h3 className="my-10">KKN belum dilaksanakan.</h3>;
+    return (
+      <h3 className="my-10 text-center whitespace-nowrap w-full">
+        KKN belum dilaksanakan.
+      </h3>
+    );
   }
 
   if (timeLeft.end) {
     return (
-      <h3 className="my-10">Terima kasih atas 45 harinya, teman-teman :D.</h3>
+      <h3 className="my-10 text-center whitespace-nowrap w-full">
+        Terima kasih atas 45 harinya, teman-teman :D.
+      </h3>
     );
   }
 
