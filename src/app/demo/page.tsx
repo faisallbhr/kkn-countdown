@@ -2,7 +2,8 @@ import CountdownComponent from "@/components/Countdown";
 import Link from "next/link";
 
 export default function Demo() {
-  const startDate = new Date();
+  const today = () => new Date();
+  const startDate = today();
   const endDate = new Date();
   endDate.setDate(startDate.getDate() + 1);
 
